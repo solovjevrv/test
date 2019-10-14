@@ -54,7 +54,48 @@
 
 <body>
   <section class="main">
-    
+    <div class="wrapper">
+      <div class="main-logo">
+        <img src="./images/logo.svg" alt="Email Matrix" class="main-logo__img">
+      </div>
+      <div class="main-heading">
+        <h1 class="main-heading__title">Как настроить идеальную
+          емейл-маркетинговую кампанию?</h1>
+      </div>
+      <div class="form-wrap">
+        <div class="form-wrap__left">
+          <p>Специалисты EmailMatrix готовы дать ответы
+            по любым вопросам емейл-маркетинга:</p>
+          <b>
+            от построения стратегии
+            до технических деталей
+            кампании
+          </b>
+        </div>
+        <div class="form-wrap__right">
+          <form action="./php/mail.php" method="POST">
+            <div class="flex">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div class="flex">
+              <label for="company">Организация</label>
+              <input type="text" name="company" id="company" required>
+            </div>
+            <div class="flex">
+              <label for="email">Емейл</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="flex">
+              <label for="phone">Телефон</label>
+              <input type="text" name="phone" id="phone" required>
+            </div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox">Подписаться на рассылку EmailMatrix</label>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
   <script src="./js/bundle.js"></script>
 </body>
