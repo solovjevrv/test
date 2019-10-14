@@ -1,0 +1,26 @@
+{
+	"extends": "airbnb-base",
+	"rules": {
+		"semi": ["error", "always"],
+		"func-names": ["off"],
+		"quotes": ["off", "double"],
+		"indent": ["error", "tab"],
+		"no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+		"no-console": ["off"],
+		"max-len": ["warn", 120],
+		"eqeqeq": ["error", "smart"],
+		"no-tabs": ["error", {
+			"allowIndentationTabs": true
+		}],
+		"no-underscore-dangle": "off",
+		"no-unused-vars": ["error", {
+			"varsIgnorePattern": "^_",
+			"argsIgnorePattern": "e"
+		}]
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"jasmine": true
+	}
+}

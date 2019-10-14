@@ -1,0 +1,10 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }
+}

@@ -1,0 +1,12 @@
+<% let webpLink = link%>
+<% webpLink = webpLink.substr(0,webpLink.lastIndexOf('.')+1) + "webp"%>
+
+<picture>
+  <!-- <source type="image/webp" media="(min-width: 1921px)" srcset="src/images/very-large/bike.webp">
+  <source type="image/png" media="(min-width: 1921px)" srcset="src/images/very-large/bike.png">
+  <source type="image/webp" media="(min-width: 1281px) and (max-width: 1920px)" srcset="src/images/regular/bike-regular.webp">
+  <source type="image/png" media="(min-width: 1281px) and (max-width: 1920px)" srcset="src/images/regular/bike-regular.png"> -->
+    <!-- <img srcset="examples/images/small.jpg, examples/images/medium.jpg 2x" alt="…"> -->
+    <source type="image/webp" srcset="<%=webpLink%>" alt="<%=alt%>">
+    <img src="<%=link%>" alt="<%=alt%>">
+</picture>

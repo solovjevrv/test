@@ -1,0 +1,63 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: "OpenSans";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: $black;
+}
+// ЦВЕТА
+$lite_grey: #898989;
+$dark_grey: #707070;
+$backgrond: #f2f2f2;
+$blue: #4676a9;
+$black: #474747;
+$black_second: #2a2a2a;
+$white: #FFFFFF;
+// ЗАГОЛОВКИ
+h1 {
+	color: #474747;
+	font-size: 2.563rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+h2 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+a {
+	transition: 0.3s;
+	&:hover {
+		transition: 0.3s;
+	}
+}
+button {
+	transition: 0.3s;
+	border: none;
+	&:hover {
+		transition: 0.3s;
+	}
+}
+
+@mixin main_btn {
+	background: $blue;
+	font-weight: 500;
+	font-size: 16px;
+	font-size: 1.125rem;
+	line-height: 1.875rem;
+	text-align: center;
+	color: $white;
+	box-shadow: 0.188rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+	&:hover {
+		text-decoration: none;
+		color: $blue;
+		background: $white;
+	}
+}
+
+// Responsive - ДОЛЖЕН БЫТЬ ВСЕГДА ПОСЛЕДНИМ!!!
+@import "fonts", "media";
