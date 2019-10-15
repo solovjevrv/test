@@ -62,11 +62,9 @@ button {
 }
 
 .main {
-	// height: 100vh;
 	position: relative;
 	background: $background;
 	z-index: 1;
-
 	&:after {
 		content: "";
 		display: block;
@@ -74,10 +72,10 @@ button {
 		height: 100%;
 		background:
 			url(./../images/flower.png) no-repeat right top,
-			url(./../images/wood-cubes.png) no-repeat 20% top,
-			url(./../images/scketchbook.png) no-repeat 5% bottom,
+			url(./../images/wood-cubes.png) no-repeat 15% 5%,
+			url(./../images/scketchbook.png) no-repeat 4% 95%,
 			url(./../images/pen.png) no-repeat 85% 90%;
-		background-size: auto, auto, auto;
+		background-size: 20%, 15%, 22%, 10%;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -120,7 +118,7 @@ button {
 			font-weight: 300;
 		}
 
-		b {
+		span {
 			text-transform: uppercase;
 			font-size: 1.5rem;
 			font-weight: 900;
@@ -228,7 +226,7 @@ button {
 		position: absolute;
 		width: 75vw;
 		background: $blue;
-		height: 0.063rem;
+		height: 1px;
 		top: -25px;
 		left: 50%;
 		transform: translateX(-50%);
@@ -261,6 +259,9 @@ button {
 		font-size: 0.875rem;
 		line-height: 1.375rem;
 		font-weight: 400;
+	}
+	.big {
+		font-size: 1.125rem;
 	}
 	&__list {
 		list-style: none;

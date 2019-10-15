@@ -1,31 +1,149 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1630px) {
+  .main {
+    &:after {
+      background:
+        url(./../images/flower.png) no-repeat right top,
+        url(./../images/wood-cubes.png) no-repeat 15% 5%,
+        url(./../images/scketchbook.png) no-repeat 3% 90%,
+        url(./../images/pen.png) no-repeat 90% 90%;
+      background-size: 20%, 15%, 18%, 10%;
+    }
+  }
+}
 
+@media screen and (max-width: 1400px) {
+  .main {
+    padding-bottom: 16%;
+
+    &:after {
+      background:
+        url(./../images/flower.png) no-repeat right top,
+        url(./../images/wood-cubes.png) no-repeat 10% 2%,
+        url(./../images/scketchbook.png) no-repeat 10% bottom,
+        url(./../images/pen.png) no-repeat 90% bottom;
+      background-size: 20%, 15%, 18%, 10%;
+    }
+  }
+
+  .footer {
+    &:after {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 991px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
 
+  .footer-wrap__left {
+    flex-basis: 70%;
+  }
 }
 
-
 @media screen and (max-width: 768px) {
+  .main {
+    padding-bottom: 10%;
+  }
 
+  .form-wrap {
+    margin-top: 4rem;
+    flex-direction: column;
+
+    .form-btn {
+      min-width: 70%;
+      // margin: 2.2rem auto 3rem auto;
+    }
+  }
+
+  .form-wrap__right {
+    margin-top: 2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-wrap__left,
+  .footer-wrap__right {
+    width: 100%;
+  }
+
+  .footer-wrap__right {
+    margin-top: 1rem;
+    align-items: flex-start;
+  }
+
+  .footer__list--item {
+    margin-right: .5rem;
+    margin-left: 0;
+  }
+
+  .footer__company {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
 
+  .form-wrap {
+    margin-top: 2rem;
+  }
+
+  .form-wrap__left {
+    padding-right: 0;
+  }
+
+  .footer__contact--icon {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .main {
+    padding-bottom: 15%;
+
+    &:after {
+      background:
+        url(./../images/flower.png) no-repeat right top,
+        url(./../images/wood-cubes.png) no-repeat 5% 1%,
+        url(./../images/scketchbook.png) no-repeat 10% bottom,
+        url(./../images/pen.png) no-repeat 90% bottom;
+      background-size: 27%, 25%, 28%, 18%;
+    }
+  }
+
+  .form-wrap {
+
+    label,
+    input {
+      min-width: 100%;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    .checkbox-label {
+      margin-left: 0;
+    }
+
+    .form-btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 430px) {}
 
-}
+@media screen and (max-width: 350px) {}
 
-@media screen and (max-width: 350px) {
-
-}
-
-@media screen and (max-width: 768px) and (orientation:landscape) {
-  
-}
+@media screen and (max-width: 768px) and (orientation:landscape) {}
