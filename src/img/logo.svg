@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="179" height="39" viewBox="0 0 179 39"><g><g><g><path fill="#aeaeae" d="M115 4.046h1V33.95h-1z"/></g><g><g><text dominant-baseline="text-before-edge" style="line-height:15px" fill="#aeaeae" font-family="'OpenSans','OpenSans'" font-size="12" font-style="none" font-weight="400" transform="translate(131 7)"><tspan style="font-kerning:normal" letter-spacing="2.64">Email </tspan><tspan style="font-kerning:normal" letter-spacing="2.64">Matrix</tspan></text></g></g><g><path fill="#4676a9" d="M0 0h97v39H0zm4 35h89V4H4zm7-25h18v4H15v3h10v4H15v4h14v4H11zm24 0h3.999v-.001l8 8 8-8 .002.001H59v19h-4V15.999l-8 8-8-8v13h-4zm28-.001h6l6 6 6-6h6l-12 12zm25 19h-6l-5-5 3-3zm-18-8l3 3-5 5h-6z"/></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="39.001" viewBox="0 0 176 39.001">
+  <g id="Group_2" data-name="Group 2" transform="translate(-898 -80)">
+    <rect id="Shape_3" data-name="Shape 3" width="1" height="29.91" transform="translate(1013 84.05)" fill="#aeaeae"/>
+    <text id="Email_Matrix" data-name="Email
+Matrix" transform="translate(1028 96.177)" fill="#aeaeae" font-size="12" font-family="ArialMT, Arial" letter-spacing="0.22em"><tspan x="0" y="0">Email</tspan><tspan x="0" y="15">Matrix</tspan></text>
+    <path id="Rectangle_7" data-name="Rectangle 7" d="M995,119H898V80h97v39h0Zm-93-4h89V84H902Zm51-6V96l-8,8-3-3-5-5v13h-4V90h4l8,8,8-8h4v19Zm-44,0V90h18v4H913v3h10v4H913v4h14v4Zm71,0-5-5,3-3,8,8Zm-20,0,8-8,3,3-5,5Zm10-10-9-9h6l6,6,6-6h6l-12,12Z" fill="#4676a9"/>
+  </g>
+</svg>

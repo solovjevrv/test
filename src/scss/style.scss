@@ -1,10 +1,25 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  font-family: "OpenSans";
+	font-family: "OpenSans";
 	font-size: 16px;
 	line-height: 22px;
 	color: $black;
+}
+@mixin main_btn {
+	background: $blue;
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.875rem;
+	text-align: center;
+	color: $white;
+	box-shadow: 0.188rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+
+	&:hover {
+		text-decoration: none;
+		// color: $blue;
+		// background: $white;
+	}
 }
 // ЦВЕТА
 $lite_grey: #898989;
@@ -14,6 +29,7 @@ $blue: #4676a9;
 $black: #474747;
 $black_second: #2a2a2a;
 $white: #FFFFFF;
+
 // ЗАГОЛОВКИ
 h1 {
 	color: #474747;
@@ -21,6 +37,7 @@ h1 {
 	font-weight: 900;
 	text-transform: uppercase;
 }
+
 h2 {
 	font-weight: bold;
 	font-size: 24px;
@@ -29,46 +46,54 @@ h2 {
 
 a {
 	transition: 0.3s;
+
 	&:hover {
 		transition: 0.3s;
 	}
 }
+
 button {
 	transition: 0.3s;
 	border: none;
+
 	&:hover {
 		transition: 0.3s;
 	}
 }
+
 .main {
-	height: 100vh;
+	// height: 100vh;
 	position: relative;
 	background: $background;
 	z-index: 1;
+
 	&:after {
 		content: "";
 		display: block;
 		width: 100%;
 		height: 100%;
-		background: 
-		url(./../images/flower.png) no-repeat right top,
-		url(./../images/wood-cubes.png) no-repeat 20% top,
-		url(./../images/scketchbook.png) no-repeat 5% bottom,
-		url(./../images/pen.png) no-repeat 85% bottom;
+		background:
+			url(./../images/flower.png) no-repeat right top,
+			url(./../images/wood-cubes.png) no-repeat 20% top,
+			url(./../images/scketchbook.png) no-repeat 5% bottom,
+			url(./../images/pen.png) no-repeat 85% 90%;
 		background-size: auto, auto, auto;
 		position: absolute;
 		top: 0;
 		right: 0;
 		z-index: -1;
 	}
-	&-logo {
+
+	&__logo {
 		margin-top: 5rem;
 		margin-bottom: 4.3rem;
 	}
-	&-heading {
+
+	&__heading {
 		text-align: center;
 	}
 }
+
 .wrapper {
 	max-width: 846px;
 	margin: 0 auto;
@@ -76,18 +101,25 @@ button {
 	flex-direction: column;
 	align-items: center;
 }
+
 .form-wrap {
 	display: flex;
 	margin-top: 7.5rem;
-	&__left, &__right {
-		width: 50%;
+	flex-wrap: wrap;
+
+	&__left,
+	&__right {
+		flex-basis: 50%;
 	}
+
 	&__left {
 		padding-right: 4rem;
+
 		p {
 			font-size: 1rem;
 			font-weight: 300;
 		}
+
 		b {
 			text-transform: uppercase;
 			font-size: 1.5rem;
@@ -95,15 +127,18 @@ button {
 			color: $black;
 		}
 	}
-	.flex {
+
+	.flex-wrap {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-top: 1.4rem;
+
 		&:first-child {
 			margin-top: 0;
 		}
 	}
+
 	label {
 		margin: 0;
 		font-size: 0.875rem;
@@ -111,28 +146,144 @@ button {
 		line-height: 1.875rem;
 		color: $black;
 	}
+
 	input {
-		min-width: 70%;
+		flex-basis: 70%;
+		min-height: 38px;
+		box-shadow: 0.188rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+		border: none;
+		padding: 0rem 0.5rem;
 	}
+
 	.checkbox {
 		min-width: unset;
+
+		&:checked,
+		&:not(:checked) {
+			position: absolute;
+			left: -9999px;
+		}
+
+		&:checked+.checkbox-label,
+		&:not(:checked)+.checkbox-label {
+			display: inline-block;
+			position: relative;
+			padding-left: 28px;
+			line-height: 20px;
+			cursor: pointer;
+		}
+
+		&:checked+.checkbox-label:before,
+		&:not(:checked)+.checkbox-label:before {
+			content: "";
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 18px;
+			height: 18px;
+			background-color: #ffffff;
+			box-shadow: 0.188rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+		}
+
+		&:checked+.checkbox-label::after,
+		&:not(:checked)+.checkbox-label:after {
+			content: "";
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 18px;
+			height: 18px;
+			display: block;
+			background: url(./../images/checked.png) no-repeat center center;
+		}
+
+		&:not(:checked)+.checkbox-label:after {
+			transition: 0.2s;
+			opacity: 0;
+		}
+
+		&:checked+.checkbox-label:after {
+			transition: 0.2s;
+			opacity: 1;
+		}
+	}
+
+	.checkbox-label {
+		margin-left: 30%;
+	}
+
+	.form-btn {
+		@include main_btn();
+		min-width: 70%;
+		min-height: 59px;
+		margin-left: 30%;
+		margin-top: 2.2rem;
+		margin-bottom: 3rem;
+	}
+}
+.footer {
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 75vw;
+		background: $blue;
+		height: 0.063rem;
+		top: -25px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 1.5rem;
+	padding-bottom: 5.8rem;
+	&-wrap__left, &-wrap__right {
+		width: 50%;
+	}
+	&-wrap__left {
+		// padding-right: 4rem;
+	}
+	&-wrap__right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__contact--icon, &__contact--text {
+		display: inline-block;
+	}
+	&__contact--icon {
+		margin-right: 0.6rem;
+	}
+	&__contact--text {
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+		font-weight: 400;
+	}
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+		padding: 0;
+	}
+	&__list--item {
+		margin-left: 0.5rem;
+	}
+	&__company {
+		text-align: right;
+	}
+	&__company--item {
+		font-size: 0.688rem;
+		font-weight: 400;
+		line-height: 0.875rem;
+		color: $lite_grey;
+		margin-bottom: 0.2rem;
 	}
 }
 
-@mixin main_btn {
-	background: $blue;
-	font-weight: 500;
-	font-size: 1.125rem;
-	line-height: 1.875rem;
-	text-align: center;
-	color: $white;
-	box-shadow: 0.188rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
-	&:hover {
-		text-decoration: none;
-		color: $blue;
-		background: $white;
-	}
-}
 
 // Responsive - ДОЛЖЕН БЫТЬ ВСЕГДА ПОСЛЕДНИМ!!!
 @import "fonts", "media";

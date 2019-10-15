@@ -55,44 +55,73 @@
 <body>
   <section class="main">
     <div class="wrapper">
-      <div class="main-logo">
-        <img src="./images/logo.svg" alt="Email Matrix" class="main-logo__img">
+      <div class="main__logo">
+        <img src="./images/logo.svg" alt="Email Matrix" class="main__logo--img">
       </div>
-      <div class="main-heading">
-        <h1 class="main-heading__title">Как настроить идеальную
+      <div class="main__heading">
+        <h1 class="main__heading--title">Как настроить идеальную
           емейл-маркетинговую кампанию?</h1>
       </div>
       <div class="form-wrap">
         <div class="form-wrap__left">
           <p>Специалисты EmailMatrix готовы дать ответы
             по любым вопросам емейл-маркетинга:</p>
-          <b>
+          <span>
             от построения стратегии
             до технических деталей
             кампании
-          </b>
+          </span>
         </div>
         <div class="form-wrap__right">
           <form action="./php/mail.php" method="POST">
-            <div class="flex">
+            <div class="flex-wrap">
               <label for="name">Имя</label>
               <input type="text" name="name" id="name" required>
             </div>
-            <div class="flex">
+            <div class="flex-wrap">
               <label for="company">Организация</label>
               <input type="text" name="company" id="company" required>
             </div>
-            <div class="flex">
+            <div class="flex-wrap">
               <label for="email">Емейл</label>
               <input type="email" name="email" id="email" required>
             </div>
-            <div class="flex">
+            <div class="flex-wrap">
               <label for="phone">Телефон</label>
               <input type="text" name="phone" id="phone" required>
             </div>
-            <input type="checkbox" class="checkbox" id="checkbox">
-            <label for="checkbox">Подписаться на рассылку EmailMatrix</label>
+            <div class="flex-wrap">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="checkbox-label">Подписаться на рассылку EmailMatrix</label>
+              <button class="form-btn" type="submit">Отправить</button>
+            </div>
           </form>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-wrap__left">
+          <div class="footer__contact">
+            <img src="./images/geo.svg" alt="" class="footer__contact--icon">
+            <p class="footer__contact--text">Рязань: 390037, ул. Советской Армии, д. 19, к. 2, Н4.</p>
+          </div>
+          <div class="footer__contact">
+            <img src="./images/phone.svg" alt="" class="footer__contact--icon">
+            <p class="footer__contact--text">+7 (495) 649-62-19</p>
+          </div>
+        </div>
+        <div class="footer-wrap__right">
+          <ul class="footer__list">
+            <li class="footer__list--item"><a href="" class="footer__list--link"><img class="footer__list--img" src="./images/facebook.png" alt="facebook"></a></li>
+            <li class="footer__list--item"><a href="" class="footer__list--link"><img class="footer__list--img" src="./images/twitter.png" alt="twitter"></a></li>
+            <li class="footer__list--item"><a href="" class="footer__list--link"><img class="footer__list--img" src="./images/pinterest.png" alt="pinterest"></a></li>
+            <li class="footer__list--item"><a href="" class="footer__list--link"><img class="footer__list--img" src="./images/slideshare.png" alt="slideshare"></a></li>
+            <li class="footer__list--item"><a href="" class="footer__list--link"><img class="footer__list--img" src="./images/youtube.png" alt="youtube"></a></li>
+            <li class="footer__list--item"><a href="" class="footer__list--link"><img class="footer__list--img" src="./images/linkedin.png" alt="linkedin"></a></li>
+          </ul>
+          <div class="footer__company">
+            <p class="footer__company--item">© 2010—2015 EmailMatrix,</p>
+            <p class="footer__company--item">ООО «АЙЭЙДЖ МАРКЕТИНГ»</p>
+          </div>
         </div>
       </div>
     </div>
